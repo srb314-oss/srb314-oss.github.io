@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rutgers Student-Athlete & Accounting Major Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        rutgers: {
+                            red: '#cc0033',
+                            darkred: '#990026',
+                            lightred: '#ff1a48',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #475569;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+        }
+        .dark .glass-nav {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 font-sans transition-colors duration-300">
+
+    <!-- Navigation Bar -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#hero" class="text-2xl font-black text-red-600 dark:text-red-500 tracking-tight flex items-center space-x-2">
+                <span>RUTGERS.</span><span class="text-slate-800 dark:text-slate-100 font-medium text-lg">Accounting & Athletics</span>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden md:flex items-center space-x-8 font-medium text-sm">
+                <a href="#about" class="hover:text-red-600 dark:hover:text-red-500 transition-colors">About</a>
+                <a href="#projects" class="hover:text-red-600 dark:hover:text-red-500 transition-colors">Projects & Research</a>
+                <a href="#skills" class="hover:text-red-600 dark:hover:text-red-500 transition-colors">Skills</a>
+                <a href="#contact" class="hover:text-red-600 dark:hover:text-red-500 transition-colors">Contact</a>
+            </nav>
+
+            <!-- Actions: Theme Toggle & Mobile Menu Button -->
+            <div class="flex items-center space-x-4">
+                <button id="themeToggle" aria-label="Toggle theme" class="p-2.5 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:scale-110 transition-all focus:outline-none">
+                    <i id="themeIcon" class="fa-solid fa-moon"></i>
+                </button>
+                <button id="mobileMenuBtn" aria-label="Open menu" class="md:hidden p-2.5 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 focus:outline-none">
+                    <i class="fa-solid fa-bars text-lg"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu Dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden absolute top-20 left-0 right-0 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-6 py-6 space-y-4 shadow-xl">
+            <a href="#about" class="block text-lg font-medium hover:text-red-600 transition-colors mobile-link">About</a>
+            <a href="#projects" class="block text-lg font-medium hover:text-red-600 transition-colors mobile-link">Projects & Research</a>
+            <a href="#skills" class="block text-lg font-medium hover:text-red-600 transition-colors mobile-link">Skills</a>
+            <a href="#contact" class="block text-lg font-medium hover:text-red-600 transition-colors mobile-link">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section with Headshot Integration -->
+    <section id="hero" class="min-h-screen flex items-center justify-center pt-24 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <!-- Background ambient glow effect -->
+        <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-red-600/10 dark:bg-red-600/15 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-red-600/10 text-red-600 dark:text-red-400 font-semibold text-sm border border-red-600/20 shadow-sm">
+                    <i class="fa-solid fa-medal text-red-600"></i>
+                    <span>Division 1 Student-Athlete • Rutgers University</span>
+                </div>
+                
+                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight">
+                    Driven on the Track. <br>Rigorous in <span class="text-red-600 dark:text-red-500">Accounting</span>.
+                </h1>
+                
+                <p class="text-lg sm:text-xl text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed">
+                    I am a Division 1 Student-Athlete on the Track & Field team at Rutgers University, and I am currently enrolled at Rutgers Business School, majoring in Accounting.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                    <a href="#projects" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-red-600 hover:bg-red-700 text-white font-semibold shadow-lg shadow-red-600/25 transition-all hover:-translate-y-0.5 text-center">
+                        View Capstone & Projects <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                    <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 font-semibold transition-all hover:-translate-y-0.5 text-center">
+                        Get in Touch
+                    </a>
+                </div>
+            </div>
+
+            <!-- Headshot Integration -->
+            <div class="lg:col-span-5 flex justify-center">
+                <div class="relative group">
+                    <div class="absolute -inset-1.5 bg-gradient-to-r from-red-600 to-rose-500 rounded-3xl blur opacity-30 group-hover:opacity-75 transition duration-500"></div>
+                    <div class="relative w-72 h-80 sm:w-88 sm:h-96 rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-slate-800 bg-slate-100 dark:bg-slate-900">
+                        <!-- Headshot provided -->
+                        <img src="IMG_2096.jpeg" alt="Rutgers Student-Athlete Headshot" class="w-full h-full object-cover object-top" onerror="this.src='https://placehold.co/400x500/990026/ffffff?text=Rutgers+Athlete'">
+                    </div>
+                    <!-- Floating badge -->
+                    <div class="absolute -bottom-4 -right-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 px-5 py-3 rounded-xl shadow-xl flex items-center space-x-3">
+                        <div class="w-3 h-3 rounded-full bg-red-600 animate-pulse"></div>
+                        <span class="text-xs font-bold uppercase tracking-wider">Rutgers Track & Field</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-200 dark:border-slate-800">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-5 space-y-6">
+                <div class="inline-block px-3 py-1 rounded-md bg-red-600/10 text-red-600 dark:text-red-400 font-semibold text-xs uppercase tracking-wider">
+                    Academic & Athletic Profile
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">
+                    Combining Elite Discipline with Financial Precision.
+                </h2>
+                <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                    Balancing the rigorous demands of a Division 1 collegiate sport with a premier business education has cultivated my exceptional time-management, resilience, and leadership capabilities.
+                </p>
+                <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                    At Rutgers Business School, my coursework in financial and managerial accounting, legal frameworks, and corporate analytics equips me to tackle complex analytical challenges in professional environments.
+                </p>
+            </div>
+
+            <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div class="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-red-600/10 text-red-600 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-xl font-bold">Rutgers Business School</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">
+                        Majoring in Accounting. Focused on financial auditing, tax regulations, and corporate financial statements.
+                    </p>
+                </div>
+
+                <div class="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-red-600/10 text-red-600 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-person-running"></i>
+                    </div>
+                    <h3 class="text-xl font-bold">D1 Track & Field</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">
+                        Proud member of the Rutgers Scarlet Knights Track & Field team. Demonstrating consistency, dedication, and teamwork daily.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects & Research Section -->
+    <section id="projects" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-slate-100/50 dark:bg-slate-900/50 rounded-3xl my-12 border border-slate-200/60 dark:border-slate-800/60">
+        <div class="text-center space-y-4 max-w-2xl mx-auto mb-16">
+            <div class="inline-block px-3 py-1 rounded-md bg-red-600/10 text-red-600 dark:text-red-400 font-semibold text-xs uppercase tracking-wider">
+                Academic Portfolio
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Key Projects & Case Studies</h2>
+            <p class="text-slate-600 dark:text-slate-400">In-depth business law analysis and management projects completed at Rutgers University.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <!-- Project 1 -->
+            <div class="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col p-8 space-y-6">
+                <div class="flex items-center justify-between">
+                    <span class="px-3 py-1 rounded-full bg-red-600/10 text-red-600 font-semibold text-xs">Business Law Capstone</span>
+                    <i class="fa-solid fa-scale-balanced text-red-600 text-2xl"></i>
+                </div>
+                <div class="space-y-3">
+                    <h3 class="text-2xl font-bold">Rutgers Track & Field Contract Analysis</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed">
+                        Analyzed and broke down the official legal contract signed to become a participant of the Division 1 Rutgers Track & Field team. Examined compliance terms, liability waivers, NIL guidelines, and institutional obligations under sports law frameworks.
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-100 dark:border-slate-800">
+                    <span class="px-3 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-xs font-medium">Contract Law</span>
+                    <span class="px-3 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-xs font-medium">Athletic Compliance</span>
+                    <span class="px-3 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-xs font-medium">Risk Analysis</span>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col p-8 space-y-6">
+                <div class="flex items-center justify-between">
+                    <span class="px-3 py-1 rounded-full bg-red-600/10 text-red-600 font-semibold text-xs">Management Project</span>
+                    <i class="fa-solid fa-users-rectangle text-red-600 text-2xl"></i>
+                </div>
+                <div class="space-y-3">
+                    <h3 class="text-2xl font-bold">Amwins Team Analysis</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed">
+                        Conducted an extensive management project analyzing communication dynamics between different generations of employees within the corporate structure of Amwins. Developed actionable recommendations to bridge communication gaps and improve cross-generational workflow efficiency.
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-100 dark:border-slate-800">
+                    <span class="px-3 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-xs font-medium">Organizational Behavior</span>
+                    <span class="px-3 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-xs font-medium">Communication Strategy</span>
+                    <span class="px-3 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-xs font-medium">Team Management</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center space-y-4 max-w-2xl mx-auto mb-16">
+            <div class="inline-block px-3 py-1 rounded-md bg-red-600/10 text-red-600 dark:text-red-400 font-semibold text-xs uppercase tracking-wider">
+                Competencies
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Core Skills & Attributes</h2>
+            <p class="text-slate-600 dark:text-slate-400">Professional and interpersonal strengths forged through athletics, business studies, and client experiences.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <!-- Skill 1 -->
+            <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex items-center space-x-4">
+                <div class="w-12 h-12 rounded-xl bg-red-600/10 text-red-600 flex items-center justify-center text-xl shrink-0">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg">Teamwork</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Collaborating effectively in high-stakes team environments.</p>
+                </div>
+            </div>
+
+            <!-- Skill 2 -->
+            <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex items-center space-x-4">
+                <div class="w-12 h-12 rounded-xl bg-red-600/10 text-red-600 flex items-center justify-center text-xl shrink-0">
+                    <i class="fa-solid fa-face-smile"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg">Customer Satisfaction</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Delivering exceptional service and client positive outcomes.</p>
+                </div>
+            </div>
+
+            <!-- Skill 3 -->
+            <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex items-center space-x-4">
+                <div class="w-12 h-12 rounded-xl bg-red-600/10 text-red-600 flex items-center justify-center text-xl shrink-0">
+                    <i class="fa-solid fa-fire"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg">Hard Working</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Unwavering work ethic developed through D1 athletics.</p>
+                </div>
+            </div>
+
+            <!-- Skill 4 -->
+            <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex items-center space-x-4">
+                <div class="w-12 h-12 rounded-xl bg-red-600/10 text-red-600 flex items-center justify-center text-xl shrink-0">
+                    <i class="fa-solid fa-chess-queen"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg">Leadership</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Guiding teams toward shared goals with accountability.</p>
+                </div>
+            </div>
+
+            <!-- Skill 5 -->
+            <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex items-center space-x-4">
+                <div class="w-12 h-12 rounded-xl bg-red-600/10 text-red-600 flex items-center justify-center text-xl shrink-0">
+                    <i class="fa-solid fa-hands-holding-child"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg">Service Work</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Community engagement and dedication to supporting others.</p>
+                </div>
+            </div>
+
+            <!-- Skill 6 -->
+            <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex items-center space-x-4">
+                <div class="w-12 h-12 rounded-xl bg-red-600/10 text-red-600 flex items-center justify-center text-xl shrink-0">
+                    <i class="fa-solid fa-store"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg">Retail</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Practical experience in fast-paced commercial settings.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-slate-100/50 dark:bg-slate-900/50 rounded-3xl my-12 border border-slate-200/60 dark:border-slate-800/60">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <div class="lg:col-span-5 space-y-6">
+                <div class="inline-block px-3 py-1 rounded-md bg-red-600/10 text-red-600 dark:text-red-400 font-semibold text-xs uppercase tracking-wider">
+                    Get in Touch
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Let's connect for opportunities.</h2>
+                <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                    Whether you are discussing accounting internships, career opportunities, or project collaborations, I look forward to hearing from you.
+                </p>
+
+                <div class="space-y-4 pt-4">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-xl bg-red-600/10 text-red-600 flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-building-columns"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs text-slate-500 uppercase font-semibold">University</div>
+                            <div class="text-base font-medium">Rutgers Business School • New Brunswick, NJ</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-xl bg-red-600/10 text-red-600 flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs text-slate-500 uppercase font-semibold">Email</div>
+                            <div class="text-base font-medium">student.athlete@rutgers.edu</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="lg:col-span-7 bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm relative">
+                <form id="contactForm" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label for="name" class="text-sm font-semibold text-slate-700 dark:text-slate-300">Your Name</label>
+                            <input type="text" id="name" required class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-red-600 transition-colors" placeholder="Recruiter Name">
+                        </div>
+                        <div class="space-y-2">
+                            <label for="email" class="text-sm font-semibold text-slate-700 dark:text-slate-300">Your Email</label>
+                            <input type="email" id="email" required class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-red-600 transition-colors" placeholder="recruiter@company.com">
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <label for="subject" class="text-sm font-semibold text-slate-700 dark:text-slate-300">Subject</label>
+                        <input type="text" id="subject" required class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-red-600 transition-colors" placeholder="Accounting Opportunity / Inquiry">
+                    </div>
+                    <div class="space-y-2">
+                        <label for="message" class="text-sm font-semibold text-slate-700 dark:text-slate-300">Message</label>
+                        <textarea id="message" rows="5" required class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-red-600 transition-colors" placeholder="Write your message here..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-4 rounded-xl bg-red-600 hover:bg-red-700 text-white font-semibold shadow-lg shadow-red-600/25 transition-all hover:-translate-y-0.5">
+                        Send Message <i class="fa-solid fa-paper-plane ml-2"></i>
+                    </button>
+                </form>
+
+                <!-- Success Toast Notification Box -->
+                <div id="formToast" class="hidden absolute inset-0 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md rounded-2xl flex flex-col items-center justify-center space-y-4 p-8 text-center animate-fade-in">
+                    <div class="w-16 h-16 rounded-full bg-red-600/20 text-red-600 flex items-center justify-center text-3xl">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold">Message Sent Successfully!</h3>
+                    <p class="text-slate-600 dark:text-slate-400 max-w-sm">Thank you for reaching out. I will get back to you shortly.</p>
+                    <button id="resetFormBtn" class="px-6 py-2.5 rounded-xl bg-slate-200 dark:bg-slate-800 font-semibold text-sm hover:bg-slate-300 dark:hover:bg-slate-700 transition-all">Send Another Message</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 dark:border-slate-800 py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-sm text-slate-500 dark:text-slate-400">
+        <div>
+            © <span id="currentYear">2026</span> Rutgers University Student-Athlete Portfolio. All rights reserved.
+        </div>
+        <div class="flex items-center space-x-6 text-lg">
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="hover:text-red-600 transition-colors"><i class="fa-brands fa-github"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="hover:text-red-600 transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Theme Toggle Logic
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const htmlElement = document.documentElement;
+
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            htmlElement.classList.add('dark');
+            themeIcon.classList.replace('fa-moon', 'fa-sun');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            htmlElement.classList.toggle('dark');
+            if (htmlElement.classList.contains('dark')) {
+                localStorage.setItem('theme', 'dark');
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                localStorage.setItem('theme', 'light');
+                themeIcon.classList.replace('fa-sun', 'fa-moon');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Contact Form Submission Handler
+        const contactForm = document.getElementById('contactForm');
+        const formToast = document.getElementById('formToast');
+        const resetFormBtn = document.getElementById('resetFormBtn');
